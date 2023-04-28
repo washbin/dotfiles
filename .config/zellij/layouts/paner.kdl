@@ -4,26 +4,26 @@ layout {
         four-pane
         four-pane
         four-pane
-	four-pane
-	tab {
-		pane size=1 borderless=true {
-			plugin location="zellij:compact-bar"
-		}
-		pane
-	}
+        four-pane
+        tab {
+            pane size=1 borderless=true {
+                plugin location="zellij:compact-bar"
+            }
+            pane
+        }
 
-	pane_template name="two-split" {
-		pane split_direction="vertical" {
-			pane
-			pane
-		}
-	}
+        pane_template name="two-split" {
+            pane split_direction="vertical" {
+                pane
+                pane
+            }
+        }
 
         tab_template name="four-pane" {
-		pane size=1 borderless=true {
-			plugin location="zellij:compact-bar"
-		}
-		two-split
-		two-split
+            pane size=1 borderless=true {
+                plugin location="zellij:compact-bar"
+            }
+            two-split
+            two-split
         }
 }
