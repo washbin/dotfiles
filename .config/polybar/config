@@ -1,0 +1,194 @@
+[colors]
+background = #1e222a
+foreground = #adb1b9
+dark-light = #272A2B 
+active-light = #313435
+
+[bar/example]
+tray-position = right
+width =  100%
+height = 26
+padding-left =1
+padding-right =0
+background = ${colors.background}
+foreground = ${colors.foreground}
+bottom = false
+border-top-size = 7
+border-bottom-size = 7
+border-top-color = ${colors.background}
+border-bottom-color = ${colors.background}
+line-size = 3
+wm-restack = bspwm
+modules-left = filesystem temperature time xkeyboard practice
+modules-center = bspwm
+modules-right = wlan alsa battery
+font-0 = Cascadia Code:style=SemiBold
+font-1 = JetBrainsMono Nerd Font:style=Bold:pixelsize=13;2
+
+[module/practice]
+type = custom/script
+exec = echo "   ACDEGHIJKLNOQRSTUXZ"
+interval = 10000000
+
+[module/xkeyboard]
+type = internal/xkeyboard
+format-prefix = "    "
+label-layout = %layout%
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+format = " <ramp> <label> "
+format-warn = " <ramp> <label-warn> "
+format-padding = 0
+label = %temperature-c%
+label-warn = %temperature-c%
+ramp-0 =  ""
+ramp-foreground = #a4ebf3
+label-padding-right = 1
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+inline-mode = true
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+format = %{B#2b2f37}[<label-state>%{B#2b2f37}]
+label-separator = "]["
+label-separator-background = #2b2f37
+label-focused =  %name%  
+label-focused-foreground = ${colors.foreground}
+label-focused-underline =  #565c64
+label-focused-padding = 1
+label-focused-background = #2b2f37
+label-occupied = %name%  
+label-occupied-foreground =   ${colors.foreground}
+label-occupied-background = #2b2f37
+label-occupied-padding = 1
+label-empty = %name%
+label-empty-foreground = #646870  
+label-empty-background = #2b2f37
+label-empty-padding = 1
+label-urgent = %name%
+label-urgent-foreground = #88C0D0
+label-urgent-background = #2b2f37
+label-urgent-padding = 1
+
+[module/alsa]
+type = internal/alsa
+format-volume = " <label-volume> <bar-volume> "
+label-volume = " "
+label-volume-foreground = ${colors.foreground}
+format-muted-foreground = ${colors.foreground}
+label-muted = " "
+format-muted-padding = 1
+format-muted-background = #2b2f37
+bar-volume-width = 10
+bar-volume-foreground-0 = #61afef
+bar-volume-foreground-1 = #61afef
+bar-volume-foreground-2 = #61afef
+bar-volume-foreground-3 = #61afef
+bar-volume-foreground-4 = #61afef
+bar-volume-foreground-5 = #61afef
+bar-volume-foreground-6 = #61afef
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-foreground = #61afef
+bar-volume-indicator-font = 2
+bar-volume-fill = ━
+bar-volume-fill-foreground = #61afef
+bar-volume-fill-font = 2
+bar-volume-empty = ━
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground}
+format-volume-padding = 1
+
+[module/time]
+type = internal/date
+interval = 15
+format = <label>
+time = %{F#888e96} %I:%M %p%{F-}
+time-alt = %{F#61afef} %a, %b %d%{F-}
+label = %date% %time%
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+label-mounted = "   %free%  "
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/text 
+content ="  " 
+content-padding =2
+click-left = poweroff &
+content-foreground =  #e06c75
+
+[module/wlan]
+type = internal/network
+interface = wlp4s0
+interval = 3.0
+format-connected = <label-connected>
+label-connected = " "
+label-connected-foreground = #A3BE8C 
+format-disconnected = <label-disconnected>
+label-disconnected = "disconnected"
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ACAD
+full-at = 98
+format-charging = " <animation-charging> <label-charging> "
+label-charging = %percentage% %
+format-charging-padding = 1
+format-discharging = " <ramp-capacity> <label-discharging> "
+label-discharging = %percentage% %
+format-discharging-foreground = ${colors.foreground}
+format-full-prefix = "  "
+format-full-prefix-foreground = #A0E8A2
+label-discharging-foreground = ${colors.foreground}
+ramp-capacity-foreground =  #A0E8A2  
+label-charging-foreground = ${colors.foreground}
+ramp-capacity-0 = "  " 
+ramp-capacity-1 = "  " 
+ramp-capacity-2 = "  " 
+ramp-capacity-3 = "  " 
+ramp-capacity-4 = "  "
+animation-charging-0 = "  " 
+animation-charging-1 = "  " 
+animation-charging-2 = "  " 
+animation-charging-3 = "  " 
+animation-charging-4 = "  "
+animation-charging-foreground = #DF8890
+animation-charging-framerate = 910 
+format-discharging-padding = 1
+
+[module/xbacklight]
+type = internal/xbacklight
+format = <label>
+format-prefix = "  "
+label = %percentage% %
+format-prefix-foreground = #61afef
+label-foreground =   #D8DEE9
+format-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 2.5
+format-prefix = "  " 
+format = <label> 
+label = CPU %percentage% %
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+ 
+; vim:ft=dosini

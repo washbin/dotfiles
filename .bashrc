@@ -14,11 +14,16 @@ alias ..='cd ..'
 # PS1='[\u@\h \W]\$ '
 PS1="\[\e[32m\]\u\[\e[00m\]@\h \[\e[32m\]\w \[\e[00m\]> "
 
+export EDITOR="nvim"
+export VISUAL="nvim"
+alias edit=nvim
 
 PATH="/home/washbin/.local/bin:$PATH"
 
 alias disable-lid-sleep-for-1h="sudo systemd-inhibit --what=handle-lid-switch sleep 1h"
 
+
+alias tb="nc termbin.com 9999"
 
 eval "$(starship init bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -32,6 +37,4 @@ alias du-advance=ncdu
 alias zrf="zellij run --floating"
 alias ze="zellij edit"
 
-export EDITOR="nvim"
-export VISUAL="nvim"
-alias edit=nvim
+export PATH="$PATH:/home/washbin/.foundry/bin"
