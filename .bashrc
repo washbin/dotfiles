@@ -6,24 +6,29 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias mv='mv -i'
-alias cp='cp -i'
-alias rm='rm -i'
 alias grep='grep --color=auto'
+
 alias ..='cd ..'
 # PS1='[\u@\h \W]\$ '
 PS1="\[\e[32m\]\u\[\e[00m\]@\h \[\e[32m\]\w \[\e[00m\]> "
+
+bind "set bell-style none"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
 alias edit=nvim
 
-PATH="/home/washbin/.local/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 
-alias disable-lid-sleep-for-1h="sudo systemd-inhibit --what=handle-lid-switch sleep 1h"
-
+alias disable-lid-sleep="sudo systemd-inhibit --what=handle-lid-switch sleep"
+alias disable-lid-sleep-for-1h="disable-lid-sleep 1h"
 
 alias tb="nc termbin.com 9999"
+
+alias mv='mv -i'
+alias cp='cp -i'
+alias rm='rm -i'
+
 
 eval "$(starship init bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -37,4 +42,4 @@ alias du-advance=ncdu
 alias zrf="zellij run --floating"
 alias ze="zellij edit"
 
-export PATH="$PATH:/home/washbin/.foundry/bin"
+export PATH="$PATH:$HOME/.foundry/bin"

@@ -235,7 +235,7 @@
         "format": "[<span style='italic'>{icon}</span> {volume}% | {format_source}]",
         "format-bluetooth": "[<span style='italic'>{icon}</span>{volume}% | {format_source}]",
         "format-bluetooth-muted": "[<span style='italic'> {icon}</span> | {format_source}]",
-        "format-muted": "[<span style='italic'> </span> {format_source}]",
+        "format-muted": "[<span style='italic'> </span> | {format_source}]",
         "format-source": "<span style='italic'></span> {volume}%",
         "format-source-muted": "<span style='italic'> </span>",
         "format-icons": {
