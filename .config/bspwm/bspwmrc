@@ -38,6 +38,3 @@ picom &
 
 # Remap numpad 5 to d
 xmodmap ~/.Xmodmap &
-
-bspc rule -a dropdown sticky=on state=floating hidden=on
-kitty --class dropdown

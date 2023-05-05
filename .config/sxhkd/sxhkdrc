@@ -39,10 +39,6 @@ super + shift + r
 
 
 ###BSPWM hotkeys
-
-super + u
-	scratchpad.sh dropdown
-
 # quit/restart bspwm
 super + shift + ctrl + {q,r}
 	bspc {quit,wm -r}
