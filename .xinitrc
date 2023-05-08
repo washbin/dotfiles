@@ -1,3 +1,3 @@
 exec bspwm
 
-#3 vim: set ft=sh
+# vim: set ft=sh

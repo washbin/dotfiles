@@ -5,6 +5,6 @@ killall -q polybar
 # polybar-msg cmd quit
 
 echo "---" | tee -a /tmp/polybar1.log 
-polybar example >>/tmp/polybar1.log 2>&1 & disown
+polybar darkliner >>/tmp/polybar1.log 2>&1 & disown
 
 echo "Bars launched..."
