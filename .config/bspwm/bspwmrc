@@ -29,12 +29,10 @@ feh --bg-scale $HOME/.config/windmill.jpg &
 $HOME/.config/polybar/launch.sh &
 dunst &
 picom &
+redshift-gtk &
 /usr/lib/kdeconnectd &
 # mpd &
 # udiskie -s &
-#
-# xpad &
-# pomatez &
 
 # Remap numpad 5 to d
 xmodmap ~/.Xmodmap &
