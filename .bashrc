@@ -18,6 +18,8 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 alias edit=nvim
 
+alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
 PATH="$HOME/.local/bin:$PATH"
 
 alias disable-lid-sleep="sudo systemd-inhibit --what=handle-lid-switch sleep"
@@ -30,16 +32,17 @@ alias cp='cp -i'
 alias rm='rm -i'
 
 
+
 eval "$(starship init bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 alias ll="exa -al"
 alias du-advance=ncdu
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
 alias zrf="zellij run --floating"
 alias ze="zellij edit"
 
 export PATH="$PATH:$HOME/.foundry/bin"
+
+eval "$(rtx activate bash)"
+export ERL_AFLAGS="-kernel shell_history enabled"

@@ -3,6 +3,13 @@
 @define-color dark-light #272A2B;
 @define-color active-light #313435;
 
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: black;
+  }
+}
+
 * {
 }
 
@@ -70,6 +77,13 @@ window > box {
 #temperature {
 }
 #temperature.critical {
+  background: #f53c3c;
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #clock {
@@ -200,12 +214,6 @@ window > box {
 #battery.charging {
   color: white;
   background-color: #26a65b;
-}
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: black;
-  }
 }
 #battery.critical:not(.charging) {
   background: #f53c3c;

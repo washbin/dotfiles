@@ -27,11 +27,14 @@ gsettings set org.gnome.desktop.interface monospace-font-name 'Cascadia Mono 13'
 
 feh --bg-scale $HOME/.config/windmill.jpg &
 $HOME/.config/polybar/launch.sh &
+
+killall -q dunst picom
 dunst &
 picom &
-redshift-gtk &
-/usr/lib/kdeconnectd &
+
+# redshift-gtk &
 # mpd &
+# /usr/lib/kdeconnectd &
 # udiskie -s &
 
 # Remap numpad 5 to d
