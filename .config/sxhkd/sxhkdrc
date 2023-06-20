@@ -22,7 +22,8 @@ XF86AudioPlay
 /* XF86AudioPause */
 
 Print
-	scrot $HOME/Pictures/'shot_%Y_%m_%d_%H_%M_%S.png' && notify-send SCREEN_SHOT
+    flameshot gui
+	# scrot $HOME/Pictures/'shot_%Y_%m_%d_%H_%M_%S.png' && notify-send SCREEN_SHOT
 
 
 super + Return
