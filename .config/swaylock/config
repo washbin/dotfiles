@@ -1,6 +1,7 @@
 daemonize
 screenshots
 clock
+timestr=%I:%M %p
 indicator
 indicator-radius=200
 indicator-thickness=7
