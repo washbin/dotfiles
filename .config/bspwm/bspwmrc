@@ -25,6 +25,9 @@ gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
 gsettings set org.gnome.desktop.interface font-name 'Cascadia Code 13'
 gsettings set org.gnome.desktop.interface monospace-font-name 'Cascadia Mono 13'
 
+# multiple keyboard layout
+setxkbmap -layout us,np -option 'grp:alt_shift_toggle' &
+
 feh --bg-scale $HOME/.config/windmill.jpg &
 $HOME/.config/polybar/launch.sh &
 
