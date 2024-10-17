@@ -71,6 +71,7 @@ format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
 [azure]
 symbol = "az "
+format = 'on [$symbol($username)($subscription)]($style) '
 
 [bun]
 symbol = "bun "
