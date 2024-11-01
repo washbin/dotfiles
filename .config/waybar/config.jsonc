@@ -44,76 +44,74 @@
             "warning": 30,
             "critical": 20
         },
-        "format": "<span style='italic'>{icon}</span> {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
+        "format": "<span size='large'>{icon}</span> {capacity}%",
+        "format-charging": "󰉁 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
         "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "󰁹"
         ]
     },
     "disk": {
         "interval": 30,
-        "format": "<span style='italic'> </span>{free}"
+        "format": "<span size='large'>󰋊</span> {free}"
     },
     "temperature": {
         "critical-threshold": 60,
-        "format": "<span style='italic'>{icon}</span>{temperatureC}°C",
+        "format": "<span size='large'>{icon}</span> {temperatureC}°C",
         "format-icons": [
-            " ",
-            " ",
-            " "
+            "",
+            "",
+            ""
         ]
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " {:%I:%M %p}",
-        "format-alt": " {:%Y-%m-%d}"
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "format": {
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "format": "<span size='large'>󰥔</span> {:%I:%M %p}",
+        "format-alt": "<span size='large'>󰃭</span> {:%Y-%m-%d}"
     },
     "hyprland/language": {
-        "format": "<span style='italic'> </span> {}",
-        "format-ne": "नेपालि",
+        "format": "<span size='large'>󰌌</span> {}",
+        "format-ne": "ने",
         "format-en": "En"
     },
     "mpd": {
         "on-click": "mpc toggle",
-        // "on-scroll-down": "mpc next",
-        // "on-scroll-prev": "mpc prev",
-        "format": "<span style='italic'>{stateIcon}</span>{title}",
-        "format-disconnected": "<span style='italic'> </span>Disconnected",
-        "format-stopped": "<span style='italic'> </span>Stopped",
+         "on-scroll-down": "mpc next",
+         "on-scroll-prev": "mpc prev",
+        "format": "<span size='large'>{stateIcon}</span> {title}",
+        "format-disconnected": "<span size='large'>󰝛</span> Disconnected",
+        "format-stopped": "<span size='large'>󰝚</span> Stopped",
         "unknown-tag": "N/A",
         "interval": 2,
         "consume-icons": {
-            "on": " "
+            "on": ""
         },
         "random-icons": {
-            "off": "<span color=\"#f53c3c\"> </span> ",
-            "on": " "
+            "off": "<span color=\"#f53c3c\">󰒟</span> ",
+            "on": "󰒟"
         },
         "repeat-icons": {
-            "on": " "
+            "on": "󰑖"
         },
         "single-icons": {
-            "on": "1"
+            "on": "󰑘"
         },
         "state-icons": {
-            "paused": " ",
-            "playing": " "
+            "paused": "󰏤",
+            "playing": "󰐊"
         },
         "max-length": 32,
         "rotate": 1,
-        "tooltip-format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}\n{artist} - {album} - {title}\n({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩\n{volume}%  ",
+        "tooltip-format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}\n{artist} - {album} - {title}\n({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩\n{volume}% 󰝚 ",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "hyprland/workspaces": {
         "format": "{icon}",
-        // "persistent_workspaces": {
-        //     "*": 6
-        // },
         "format-icons": {
             "1": "[I]",
             "2": "[II]",
@@ -123,8 +121,8 @@
             "6": "[VI]",
             "7": "[VII]",
             "8": "[VIII]",
-            "persistent": " ",
-            "default": " "
+            "persistent": "",
+            "default": ""
         }
     },
     "tray": {
@@ -132,57 +130,57 @@
         "spacing": 10
     },
     "idle_inhibitor": {
-        "format": "<span style='italic'>{icon}</span>",
+        "format": "<span size='large'>{icon}</span>",
         "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+            "activated": "󰈈",
+            "deactivated": "󰈉"
         },
         "tooltip-format-activated": "Activated\nNo Screen Auto Lock\nPresentation Mode\nMovie Mode",
         "tooltip-format-deactivated": "Deactivated\nScreen Will Auto Lock",
         "icon-size": 21
     },
     "network": {
-        "format": "<span style='italic'> </span>",
-        "format-wifi": "<span style='italic'> </span> {essid}/{signalStrength}%",
-        "format-ethernet": "<span style='italic'> </span> {ipaddr}/{cidr}",
-        "format-linked": "<span style='italic'> </span> {ifname} (No IP)",
-        "format-disconnected": "<span style='italic'>⚠</span> Disconnected",
-        "tooltip-format": " {ifname}\nvia {gwaddr}\n@ {ipaddr}/{cidr}"
+        "format": "<span size='large'>󰖩</span>",
+        "format-wifi": "<span size='large'>󰖩</span> {essid}/{signalStrength}%",
+        "format-ethernet": "<span size='large'>󰈀</span> {ipaddr}/{cidr}",
+        "format-linked": "<span size='large'>󰈀</span> {ifname} (No IP)",
+        "format-disconnected": "<span size='large'>󱚵</span> Disconnected",
+        "tooltip-format": "󰈀 {ifname}\nvia {gwaddr}\n@ {ipaddr}/{cidr}"
     },
     "bluetooth": {
         "format": "{icon} {status}",
-        "format-connected": "{icon} {device_alias}",
-        "format-connected-battery": "{icon} {device_alias}/{device_battery_percentage}%",
+        "format-connected": "{icon} {num_connections}",
+        //"format-connected-battery": "{icon} {device_alias}/{device_battery_percentage}%",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
         "format-icons": [
-            "<span style='italic'></span>"
+            "<span size='large'>󰂯</span>"
         ]
     },
     "pulseaudio": {
-        "format": "<span style='italic'>{icon}</span> {volume}%  {format_source}",
-        "format-bluetooth": "<span style='italic'>{icon}</span>{volume}%  {format_source}",
-        "format-bluetooth-muted": "<span style='italic'> {icon}</span>  {format_source}",
-        "format-muted": "<span style='italic'> </span>  {format_source}",
-        "format-source": "<span style='italic'></span> {volume}%",
-        "format-source-muted": "<span style='italic'> </span>",
+        "format": "<span size='large'>{icon}</span> {volume}% {format_source}",
+        "format-bluetooth": "<span size='large'>{icon}󰂰</span> {volume}% {format_source}",
+        "format-bluetooth-muted": "<span size='large'>󰝟{icon}󰂰</span> {format_source}",
+        "format-muted": "<span size='large'>󰝟</span> {format_source}",
+        "format-source": "<span size='large'>󰍬</span> {volume}%",
+        "format-source-muted": "<span size='large'>󰍭</span>",
         "format-icons": {
-            "headphone": "<span style='italic'> </span>",
-            "hands-free": "",
-            "headset": "",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰏲",
+            "car": "󰄋",
             "default": [
-                "",
-                "",
-                " "
+                "󰕿",
+                "󰖀",
+                "󰕾"
             ]
         },
-        "on-click": "amixer -q set Capture toggle",
-        "on-click-right": "amixer -q set Master toggle"
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
     "custom/practice": {
         "format": "ACDEGHIJKLNOQRSTUXZ"

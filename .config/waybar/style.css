@@ -5,7 +5,7 @@
 
 @keyframes blink {
   to {
-    background-color: #ffffff;
+    background-color: white;
     color: black;
   }
 }
@@ -65,8 +65,8 @@ window > box {
   padding: 0px 2px;
   margin: 0px 2px;
 
-  /* border-radius: 10px; */
-  /* background: @theme_base_color; */
+  border-radius: 5px; 
+   /*background: @theme_base_color; */
 }
 
 #disk {
@@ -136,7 +136,7 @@ window > box {
 
 #idle_inhibitor {
     margin: 0px;
-    padding: 0px;
+    padding: 0px 10px;
 }
 #idle_inhibitor.activated {
   background: seagreen;
@@ -150,15 +150,14 @@ window > box {
 #network.disabled {
 }
 #network.disconnected {
-  background-color: red;
+  color: red;
 }
 #network.linked {
 }
 #network.ethernet {
 }
 #network.wifi {
-  color: white;
-  background-color: #26a65b;
+  color: #26a65b;
 }
 
 #bluetooth {
@@ -170,6 +169,7 @@ window > box {
 #bluetooth.on {
 }
 #bluetooth.connected {
+    color: #0077B5;
 }
 #bluetooth.discoverable {
 }
